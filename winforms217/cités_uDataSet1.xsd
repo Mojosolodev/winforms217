@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="cités_uDataSet1" targetNamespace="http://tempuri.org/cités_uDataSet1.xsd" xmlns:mstns="http://tempuri.org/cités_uDataSet1.xsd" xmlns="http://tempuri.org/cités_uDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.winforms217.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vue_batimentTableAdapter" GeneratorDataComponentClassName="vue_batimentTableAdapter" Name="vue_batiment" UserDataComponentName="vue_batimentTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="cités_u.dbo.vue_batiment" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT code, libelle, nb_niveau, nb_chambre, prix_chambre FROM dbo.vue_batiment</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="code" DataSetColumn="code" />
+              <Mapping SourceColumn="libelle" DataSetColumn="libelle" />
+              <Mapping SourceColumn="nb_niveau" DataSetColumn="nb_niveau" />
+              <Mapping SourceColumn="nb_chambre" DataSetColumn="nb_chambre" />
+              <Mapping SourceColumn="prix_chambre" DataSetColumn="prix_chambre" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="cités_uDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="cités_uDataSet1" msprop:Generator_DataSetName="cités_uDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vue_batiment" msprop:Generator_RowEvHandlerName="vue_batimentRowChangeEventHandler" msprop:Generator_RowDeletedName="vue_batimentRowDeleted" msprop:Generator_RowDeletingName="vue_batimentRowDeleting" msprop:Generator_RowEvArgName="vue_batimentRowChangeEvent" msprop:Generator_TablePropName="vue_batiment" msprop:Generator_RowChangedName="vue_batimentRowChanged" msprop:Generator_RowChangingName="vue_batimentRowChanging" msprop:Generator_TableClassName="vue_batimentDataTable" msprop:Generator_RowClassName="vue_batimentRow" msprop:Generator_TableVarName="tablevue_batiment" msprop:Generator_UserTableName="vue_batiment">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="code" msprop:Generator_ColumnPropNameInRow="code" msprop:Generator_ColumnPropNameInTable="codeColumn" msprop:Generator_ColumnVarNameInTable="columncode" msprop:Generator_UserColumnName="code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="libelle" msprop:Generator_ColumnPropNameInRow="libelle" msprop:Generator_ColumnPropNameInTable="libelleColumn" msprop:Generator_ColumnVarNameInTable="columnlibelle" msprop:Generator_UserColumnName="libelle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nb_niveau" msprop:Generator_ColumnPropNameInRow="nb_niveau" msprop:Generator_ColumnPropNameInTable="nb_niveauColumn" msprop:Generator_ColumnVarNameInTable="columnnb_niveau" msprop:Generator_UserColumnName="nb_niveau" type="xs:int" />
+              <xs:element name="nb_chambre" msprop:Generator_ColumnPropNameInRow="nb_chambre" msprop:Generator_ColumnPropNameInTable="nb_chambreColumn" msprop:Generator_ColumnVarNameInTable="columnnb_chambre" msprop:Generator_UserColumnName="nb_chambre" type="xs:int" />
+              <xs:element name="prix_chambre" msprop:Generator_ColumnPropNameInRow="prix_chambre" msprop:Generator_ColumnPropNameInTable="prix_chambreColumn" msprop:Generator_ColumnVarNameInTable="columnprix_chambre" msprop:Generator_UserColumnName="prix_chambre" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vue_batiment" />
+      <xs:field xpath="mstns:code" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
