@@ -40,6 +40,7 @@ namespace winforms217
                 handicap= false;
             }
             char sexe='m';
+            //radion button
             if(radioButton3.Checked)
             {
                 sexe = 'm';
